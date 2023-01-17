@@ -1,0 +1,66 @@
+/* Styling* /
+
+/*-------- STYLEGUIDE ---------*/
+
+:root{
+
+    --clr-pink-001: hsl(341°, 100%, 83%);
+    --clr-pink-002: hsl(341°, 92%, 62%);
+
+    --clr-neutral-001: hsl(0°, 0%, 100%);
+    --clr-neutral-002: hsl(232°, 10%, 56%);
+    --clr-neutral-003: hsl(234°, 25%, 52%);
+    --clr-neutral-004: hsl(233°, 54%, 16%);
+
+    --clr-gradient-pink: hsl(322°, 87%, 55%), hsl(13°, 100%, 64%);
+    --clr-gradient-purple:hsl(237°, 100%, 64%), hsl(322°, 87%, 55%);
+
+    /*font size*/
+
+    --ff-primary: 'Plus Jakarta Sans', sans-serif;
+    --ff-body: var(--ff);
+    --ff-heading: var(--ff);
+
+    --fw-medium:500;
+    --fw-bold:700;
+    --fw-xb:800;
+
+    --fs-001: 1rem;
+    --fs-002: 1.125rem;
+    --fs-003: 1.5rem;
+    --fs-004: 2rem;
+    --fs-005: 2.5rem;
+    --fs-006: 3.5rem;
+
+    --fs-body: var(--fs-002);
+    --fs-primary-heading: var(--fs-006);
+    --fs-secondary-heading: var(--fs-004);
+    --fs-secondary-heading-card: var(--fs-003);
+
+
+}
+
+/*-------- UTILITIES ---------*/
+/*-------- COMPONENTS ---------*/
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+}
+
+html:focus-within{
+    scroll-behavior: smooth;
+}
+
+body{
+    text-rendering: optimizeLegibility;
+}
+
+img{
+    max-width: 100%;
+    display: block;
+}
