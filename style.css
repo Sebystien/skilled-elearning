@@ -4,22 +4,22 @@
 
 :root{
 
-    --clr-pink-001: hsl(341°, 100%, 83%);
-    --clr-pink-002: hsl(341°, 92%, 62%);
+    --clr-pink-001: hsl(341, 100%, 83%);
+    --clr-pink-002: hsl(341, 92%, 62%);
 
-    --clr-neutral-001: hsl(0°, 0%, 100%);
-    --clr-neutral-002: hsl(232°, 10%, 56%);
-    --clr-neutral-003: hsl(234°, 25%, 52%);
-    --clr-neutral-004: hsl(233°, 54%, 16%);
+    --clr-neutral-001: hsl(0, 0%, 100%);
+    --clr-neutral-002: hsl(232, 10%, 56%);
+    --clr-neutral-003: hsl(234, 25%, 52%);
+    --clr-neutral-004: hsl(233, 54%, 16%);
 
-    --clr-gradient-pink: hsl(322°, 87%, 55%), hsl(13°, 100%, 64%);
-    --clr-gradient-purple:hsl(237°, 100%, 64%), hsl(322°, 87%, 55%);
+    --clr-gradient-pink: hsl(322, 87%, 55%), hsl(13, 100%, 64%);
+    --clr-gradient-purple:hsl(237, 100%, 64%), hsl(322, 87%, 55%);
 
     /*font size*/
 
     --ff-primary: 'Plus Jakarta Sans', sans-serif;
-    --ff-body: var(--ff);
-    --ff-heading: var(--ff);
+    --ff-body: var(--ff-primary);
+    --ff-heading: var(--ff-primary);
 
     --fw-medium:500;
     --fw-bold:700;
@@ -41,7 +41,50 @@
 }
 
 /*-------- UTILITIES ---------*/
+.title-header{
+    font-size:40px;
+    line-height: normal;
+}
+
+.text-description{
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+
+/*-------- LAYOUT ---------*/
+.container{
+    max-width: 1110px;
+    margin-inline: auto ;
+    width: 90%;
+}
+
+.flex{
+    display: flex;
+}
+
+.flex-spacing{
+    justify-content: space-between;
+}
+
+.margin-top{
+    margin-top: 16px;
+}
+ 
+
 /*-------- COMPONENTS ---------*/
+
+.btn{
+    font-size: var(--fs-001);
+    text-transform: uppercase;
+    font-weight: var(--fw-bold);
+}
+
+.btn-gradient-01{
+    background-image:linear-gradient(var(--clr-gradient-pink));
+}
+
+/*-------- GLOBAL RESETS ---------*/
 
 *,
 *::before,
@@ -58,9 +101,28 @@ html:focus-within{
 
 body{
     text-rendering: optimizeLegibility;
+    font-family: var(--ff-body);
 }
 
 img{
     max-width: 100%;
     display: block;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+
+/*-------- NAV AND HEADER ---------*/
+
+.nav{
+    margin-bottom: 38px;
+}
+
+
+.hero-title,
+.hero-text{
+    margin-bottom: 24px;
 }
