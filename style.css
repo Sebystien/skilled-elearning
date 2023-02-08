@@ -12,7 +12,7 @@
     --clr-neutral-003: hsl(234, 25%, 52%);
     --clr-neutral-004: hsl(233, 54%, 16%);
 
-    --clr-gradient-pink: hsl(322, 87%, 55%), hsl(13, 100%, 64%);
+    --clr-gradient-pink: hsl(13, 100%, 64%), hsl(322, 87%, 55%);
     --clr-gradient-purple:hsl(237, 100%, 64%), hsl(322, 87%, 55%);
 
     /*font size*/
@@ -40,7 +40,42 @@
 
 }
 
-/*-------- UTILITIES ---------*/
+/*-------- GLOBAL RESETS ---------*/
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+}
+
+
+
+html:focus-within{
+    scroll-behavior: smooth;
+}
+
+body{
+    text-rendering: optimizeLegibility;
+    font-family: var(--ff-body);
+}
+
+img{
+    max-width: 100%;
+    display: block;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+
+
+
+/*-------- TYPOGRAPHY ---------*/
 .title-header{
     font-size:40px;
     line-height: normal;
@@ -51,6 +86,14 @@
     line-height: 1.7;
 }
 
+/*-------- UTILITIES ---------*/
+.text-color-blue{
+    color: var(--clr-neutral-004);
+}
+
+.text-color-light{
+    color: var(--clr-neutral-002);
+}
 
 /*-------- LAYOUT ---------*/
 .container{
@@ -76,41 +119,12 @@
 
 .btn{
     font-size: var(--fs-001);
-    text-transform: uppercase;
+    text-transform: capitalize;
     font-weight: var(--fw-bold);
 }
 
 .btn-gradient-01{
     background-image:linear-gradient(var(--clr-gradient-pink));
-}
-
-/*-------- GLOBAL RESETS ---------*/
-
-*,
-*::before,
-*::after{
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-
-}
-
-html:focus-within{
-    scroll-behavior: smooth;
-}
-
-body{
-    text-rendering: optimizeLegibility;
-    font-family: var(--ff-body);
-}
-
-img{
-    max-width: 100%;
-    display: block;
-}
-
-a{
-    text-decoration: none;
 }
 
 
@@ -119,10 +133,53 @@ a{
 
 .nav{
     margin-bottom: 38px;
+    align-items: center;
 }
 
 
 .hero-title,
 .hero-text{
     margin-bottom: 24px;
+} 
+
+.btn-cta-top{
+    background: var(--clr-neutral-004);
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+}
+
+.btn-cta-top:visited,
+.btn-cta-top:link{
+    color: var(--clr-neutral-001);
+}
+
+
+.hero-text{
+    margin-bottom: 2.4rem;
+}
+
+/*--------  ---------*/
+
+.btn-cta-hero{
+    padding: 1.2rem 2.4rem;
+    border-radius: 3rem;
+    
+}
+
+.btn-cta-hero:link,
+.btn-cta-hero:visited{
+   color: var(--clr-neutral-001);
+}
+
+.hero-img-box{
+    margin-top: 4.8rem;
+}
+
+
+/*-------- MAIN ---------*/
+.box-top{
+    color: var(--clr-neutral-001);
+    font-size: 18px;
+    padding: 2.4rem 0 2.4rem 2.4rem;
+    border-radius: 10px;
 }
